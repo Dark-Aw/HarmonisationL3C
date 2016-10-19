@@ -43,5 +43,8 @@ void afficheTas(const int* tab, const int n);
 	Si pour chacun des deux temps il n'y a aucun changement, le tableau est considéré comme trié.
 */
 void triPairImpair(int* tab, const int n);
-
+void triParSelection(int tab[],int taille);
+void triParInsertion(int tab[],int taille);
+void triAbulle(int tab[],int taille);
+void generationTableau(int tab[],int taille);
 #endif

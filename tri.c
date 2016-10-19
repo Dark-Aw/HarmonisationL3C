@@ -95,4 +95,64 @@ void triPairImpair(int* tab, const int n){
 			}
 		}
 	}
+
+}
+
+void generationTableau(int tab[],int taille)
+{
+	int nombre,i;
+	for (i=0;i<taille;i++)
+	{
+		nombre = rand();
+		tab[i]=nombre;
+	}
+}
+
+void triAbulle(int tab[],int taille){
+	int tmp,i,j;
+	for (j=0;j<taille-1;j++)
+	{
+		for(i=0;i<taille-1;i++)
+		{
+			if(tab[i]>tab[i+1])
+		 	{	
+		 	tmp=tab[i];
+		 	tab[i]=tab[i+1];
+		 	tab[i+1]=tmp;
+		 	}
+		}
+	}
+}
+
+void triParSelection(int tab[],int taille){
+	int min,i,j,tmp;
+	for (i=0;i<taille;i++)
+	{
+		min = tab[i];
+		for (j=i;j<taille;j++)
+		{
+			if (tab[j]<min)
+			{		
+				min=tab[j];
+				tmp=tab[j];
+				tab[j]=tab[i];
+				tab[i]=tmp;
+			}
+	
+		
+		}
+	}
+	
+}
+void triParInsertion(int tab[],int taille){
+	int i,j,nb;
+	for(i=0;i<taille;i++){
+		nb = tab[i];
+		for(j=i;j>0&&tab[j-1]>nb;j--)
+		{
+			tab[j]=tab[j-1];
+		}
+		tab[j]=nb;
+	}
+	
 }
